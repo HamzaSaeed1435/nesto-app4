@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesto Hypermarket Lucky Draw</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .header {
+            background: linear-gradient(90deg, #0033a0, #005bb5);
+            color: white;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .header img {
+            max-width: 120px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+        .content {
+            padding: 40px 20px;
+            width: 100%;
+        }
+        .content h1 {
+            color: #0033a0;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        .content p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .lucky-draw {
+            position: relative;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .lucky-draw img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .button {
+            background-color: #0033a0;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+        .button.download {
+            background-color: #28a745;
+        }
+        .button.download:hover {
+            background-color: #218838;
+        }
+        .footer {
+            background: #0033a0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 24px;
+            }
+            .content p {
+                font-size: 16px;
+            }
+            .button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./logo.png" alt="Nesto Hypermarket Logo">
+            <h1>BAHRAIN 2024 - Lucky Draw</h1>
+        </div>
+        <div class="content">
+            <h1>Shop & Win 4 Cars</h1>
+            <p>Participate in the Nesto Hypermarket Lucky Draw and stand a chance to win 4 amazing cars! Shop now and apply for your free coupon code.</p>
+            <div class="lucky-draw">
+                <img src="./img.jpg" alt="Lucky Draw Image">
+            </div>
+            <div class="actions">
+                <a href="#" class="button">Coupon Code Apply For Free</a>
+                <a href="#" class="button download">Download App</a>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2024 Nesto Hypermarket. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
