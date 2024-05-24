@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nesto Hypermarket Lucky Draw</title>
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -58,15 +59,18 @@
             color: #666;
             margin-bottom: 30px;
         }
-        .lucky-draw {
+        .swiper-container {
+            width: 100%;
+            padding: 20px 0;
+        }
+        .swiper-slide {
             background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
             display: flex;
             justify-content: center;
+            align-items: center;
+            border-radius: 10px;
         }
-        .lucky-draw img {
+        .swiper-slide img {
             max-width: 100%;
             border-radius: 10px;
         }
@@ -90,7 +94,7 @@
             background-color: #45A049;
         }
         .button.download {
-            background-color: #45A049;
+            background-color:  #45A049;
         }
         .button.download:hover {
             background-color: #45A049;
@@ -128,11 +132,18 @@
         <div class="content">
             <h1>Shop & Win 4 Cars</h1>
             <p>Participate in the Nesto Hypermarket Lucky Draw and stand a chance to win 4 amazing cars! Shop now and apply for your free coupon code.</p>
-            <div class="lucky-draw">
-                <img src="./img.jpeg" alt="Lucky Draw Image">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img.jpeg" alt="Lucky Draw Image 1"></div>
+                    <div class="swiper-slide"><img src="./img2.png" alt="Lucky Draw Image 2"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <div class="actions">
-                <!-- <a href="#" class="button">Apply for Free Coupon Code</a> -->
                 <a href="#" class="button download">Download App</a>
             </div>
         </div>
@@ -140,5 +151,24 @@
             &copy; 2024 Nesto Hypermarket. All rights reserved.
         </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
